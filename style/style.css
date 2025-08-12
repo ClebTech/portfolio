@@ -1,0 +1,237 @@
+@charset "UTF-8";
+
+:root{
+    --main-color: rgb(109, 58, 156);
+    --secundary-color: orange;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#nome{
+    color: var(--secundary-color);
+    margin-bottom: 0;
+    font-size: clamp(1.25rem, 4vw, 2rem); /*clamp(min, ideal, max)*/ 
+    text-align: center;
+}
+
+#cargo{
+    font-weight: 100;
+    margin-top: 0;
+    font-size: clamp(0.75rem, 3vw, 1.5rem);
+    color:rgb(255, 255, 255)
+}
+
+.topico{
+    align-self: flex-start;
+    font-size: 20px;
+    color: var(--secundary-color);
+}
+
+.subtopico{
+    align-self: flex-start;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 15px;
+    color: white;
+}
+
+.texto-apresentacao{
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    margin: 0;
+}
+
+.texto-educacao{
+    color: white;
+    font-size: 90%;
+    align-self: flex-start;
+    margin-bottom: 0;
+    margin-top: 2%;
+}
+
+#bloco2{
+    width: 70vw;
+    padding: 2rem 4.5rem 2rem 4.5rem;
+    animation: slideRight 1s ease-out forwards;
+}
+
+#bloco2 p{
+    width: 30vw;
+}
+
+#bloco1{
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: var(--main-color);
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    animation: slideLeft 1s ease-out forwards;
+}
+
+#foto-nome {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#desenho {
+    display: block;
+    border-radius: 50%;
+    border: 3px solid var(--secundary-color);
+}
+
+#desenho:hover{
+    border: 3px solid white;
+}
+
+.subtopico2{
+    font-weight: 100;
+}
+
+.competencias{
+    display: flex;
+}
+
+.tecnologias{
+    display: flex;
+    gap: 3rem;
+}
+
+.destaque{
+    background-color: var(--secundary-color);
+}
+
+nav{
+    top: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 6vh;
+    background-color: var(--main-color);
+    border: 1px solid black;
+    z-index: 1000; /*garante que fique por cima*/
+
+    /* animation: slideDown 0.8s ease-out forwards; */
+}
+
+nav ul{
+    gap: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    height: 100%;
+}
+
+nav ul li{
+    list-style-type: none;
+    
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+main{
+    
+    /* color: white;
+    background-color: black; */ /*darkmode*/
+
+    margin-top: 6vh;
+    display: flex;
+    width: 100vw;
+    height: 94vh;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 10vh;
+    background-color: rgb(109, 58, 156);
+    font-weight: bold;
+    border: 2px solid rgb(0, 0, 0);
+    bottom: 0;
+    color: white;
+    font-size: 0.75rem;
+}
+
+.navnome{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--secundary-color);  
+    
+}
+
+.logo{
+    font-size: 1.25rem;
+}
+
+.bandeira-eua{
+    cursor: pointer;
+}
+
+/* animação da navbar (descendo de cima) */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        /* background-color: var(--main-color); */
+    }
+    100% {
+        transform: translateY(0);
+        /* background-color: var(--main-color); */
+    }
+}
+
+/* conteúdo roxo vindo da esquerda */
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-100%);
+        /* background-color: var(--main-color); */
+    }
+    100% {
+        transform: translateX(0);
+        /* background-color: var(--main-color); */
+    }
+}
+
+/* conteúdo branco vindo da direita */
+@keyframes slideRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media(max-width: 500px){
+    #bloco1{
+        width: 100vw;
+    }
+
+    #bloco2{
+        display: none;
+    }
+}
