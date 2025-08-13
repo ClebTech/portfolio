@@ -123,7 +123,7 @@ nav{
     height: 6vh;
     background-color: var(--main-color);
     border: 1px solid black;
-    z-index: 1000; /*garante que fique por cima*/
+    z-index: 1000;
 
     /* animation: slideDown 0.8s ease-out forwards; */
 }
@@ -145,7 +145,6 @@ nav a{
 
 nav ul li{
     list-style-type: none;
-    
 }
 
 nav ul li a:hover{
@@ -153,10 +152,6 @@ nav ul li a:hover{
 }
 
 main{
-    
-    /* color: white;
-    background-color: black; */ /*darkmode*/
-
     margin-top: 6vh;
     display: flex;
     width: 100vw;
@@ -219,38 +214,68 @@ footer{
     transform: scale(1.1);
 }
 
-.bandeira-eua{
+.bandeira {
+    display: block;
     cursor: pointer;
     width: 30px;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
 }
 
-.seta-baixo{
+.bandeira:hover {
+    transform: scale(1.1);
+}
+
+.seta-baixo {
     width: 10px;
 }
 
-#idiomas{
-    gap: 2px;
+.idiomas {
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    height: fit-content;
-    width: auto;
+    align-items: center;
 }
 
-#idiomas:hover{
-    transform: scale(1.1);
+.idiomas-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.dropmenu {
+    position: absolute;
+    top: 40px;
+    background: var(--main-color);
+    border-radius: 6px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+    padding: 6px;
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 100;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.dropmenu.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropmenu.hide {
+    opacity: 0;
+    transform: translateY(-5px);
 }
 
 /* animação da navbar (descendo de cima) */
 @keyframes slideDown {
     0% {
         transform: translateY(-100%);
-        /* background-color: var(--main-color); */
     }
     100% {
         transform: translateY(0);
-        /* background-color: var(--main-color); */
     }
 }
 
@@ -258,11 +283,9 @@ footer{
 @keyframes slideLeft {
     0% {
         transform: translateX(-100%);
-        /* background-color: var(--main-color); */
     }
     100% {
         transform: translateX(0);
-        /* background-color: var(--main-color); */
     }
 }
 
@@ -280,7 +303,6 @@ footer{
     #bloco1{
         width: 100vw;
     }
-
     #bloco2{
         display: none;
     }

@@ -10,66 +10,72 @@
     <nav>
         <p class="logo">
             <a href="#">
-                <span class="navnome">&lt;/&gt; Clebson</span>
+                <span class="navnome" data-key="logo">&lt;/&gt; Clebson</span>
             </a>
         </p>
         <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">PROJETOS</a></li>
-            <li><a href="#">LINK</a></li>
-            <li><a href="#">CONTATO</a></li>
+            <li><a href="#" data-key="menuHome">HOME</a></li>
+            <li><a href="#" data-key="menuProjetos">PROJETOS</a></li>
+            <li><a href="#" data-key="menuLink">LINK</a></li>
+            <li><a href="#" data-key="menuContato">CONTATO</a></li>
         </ul>
-        <div id="idiomas">
-            <img src="imagens/bandeiras/bandeira-brazil.jpg" alt="Bandeira dos Estados Unidos" title="Alterar idioma para inglês" class="bandeira-eua">
-            <img src="imagens/icones/seta-baixo.png" alt="seta para baixo" class="seta-baixo">
+        <div class="idiomas">
+            <div class="idiomas-btn">
+                <img src="imagens/bandeiras/bandeira-brazil.jpg" alt="PT-BR" title="Português" class="bandeira bandeira-atual">
+                <img src="imagens/icones/seta-baixo.png" alt="seta para baixo" class="seta-baixo">
+            </div>
+            <div class="dropmenu">
+                <img src="imagens/bandeiras/bandeira-eua.png" alt="EN-US" title="Inglês" class="bandeira">
+                <img src="imagens/bandeiras/bandeira-espanha.png" alt="ES-ES" title="Espanhol" class="bandeira">
+            </div>
         </div>
     </nav>
     <main>
         <div id="bloco1">
             <div id="foto-nome">
                 <img src="imagens/desenho.jpg" alt="Desenho" id="desenho" width="70%">
-                <h1 id="nome">Clebson Santos</h1>
+                <h1 id="nome" data-key="nome">Clebson Santos</h1>
             </div>
-            <h2 id="cargo">Desenvolver Web</h2>
+            <h2 id="cargo" data-key="cargo">Desenvolvedor Web</h2>
             <div class="topico">
-                <h3>Sobre</h3>
+                <h3 data-key="sobre">Sobre</h3>
             </div>
-            <p class="texto-apresentacao texto-branco">Estudante de <strong>Sistemas de Informação</strong> no <strong>IFNMG - Campus Januária</strong>. Atualmente estudando desenvolvimento web com foco no front-end, mas disposto a aprender novas tecnologias.</p>
+            <p class="texto-apresentacao texto-branco" data-key="textoSobre">
+                Estudante de <strong>Sistemas de Informação</strong> no <strong>IFNMG - Campus Januária</strong>. Atualmente estudando desenvolvimento web com foco no front-end, mas disposto a aprender novas tecnologias.
+            </p>
             <div class="topico">
-                <h3>Educação</h3>
+                <h3 data-key="educacao">Educação</h3>
             </div>
-            <h4 class="subtopico">IFNMG - Campus Januária</h4>
-            <p class="texto-educacao">Curso Técnico em Informática integrado com Ensino Médio | 2018 - 2020</p>
-            <p class="texto-educacao">Bacharelado em Sistemas de Informação | 2022 - 2026</p>
+            <h4 class="subtopico" data-key="instituicao">IFNMG - Campus Januária</h4>
+            <p class="texto-educacao" data-key="curso1">Curso Técnico em Informática integrado com Ensino Médio | 2018 - 2020</p>
+            <p class="texto-educacao" data-key="curso2">Bacharelado em Sistemas de Informação | 2022 - 2026</p>
             <div class="topico">
-                <h3>Idiomas</h3>
+                <h3 data-key="idiomasTitulo">Idiomas</h3>
             </div>
-            <p class="texto-educacao" style="margin-top: 0;">Português Nativo</p>
-            <p class="texto-educacao">Inglês Intermediário</p>
+            <p class="texto-educacao" style="margin-top: 0;" data-key="idioma1">Português Nativo</p>
+            <p class="texto-educacao" data-key="idioma2">Inglês Intermediário</p>
         </div>
         <div id="bloco2">
-            <h1>Experiências</h1>
+            <h1 data-key="experienciasTitulo">Experiências</h1>
             <hr>
-            <h2>Técnico em Informática</h2>
-            <h3 class="subtopico2">Autônomo | 2020 - 2022</h3>
+            <h2 data-key="exp1Titulo">Técnico em Informática</h2>
+            <h3 class="subtopico2" data-key="exp1Local">Autônomo | 2020 - 2022</h3>
+            <p data-key="exp1Texto1">Após concluir o ensino médio junto ao curso de técnico em informática, comecei a trabalhar de maneira autônoma na minha área de formação.</p>
+            <p data-key="exp1Texto2">Realizei atividades como montagem, manutenção e formatação de computadores e celulares.</p>
 
-            <p>Após concluir o ensino médio junto ao curso de técnico em informática, comecei a trabalhar de maneira autônoma na minha área de formação.</p>
-            <p>Realizei atividades como montagem, manutenção e formatação de computadores e celulares.</p>
+            <h2 data-key="exp2Titulo">Estágio/Prestação de Serviços</h2>
+            <h3 class="subtopico2" data-key="exp2Local">Núcleo do Pequi | 2024 - 2025</h3>
+            <p data-key="exp2Texto1">Prestação de serviços aproveitada como estágio remoto para a minha graduação.</p>
+            <p data-key="exp2Texto2">Realizei atualizações no front-end utilizando HTML, CSS e WordPress. Fiz upload de arquivos públicos, correção de bugs e criação de páginas responsivas etc.</p>
+            <p data-key="exp2Texto3">Participei de reuniões presenciais da empresa, discutindo mudanças atrativas para o website.</p>
 
-            <h2>Estágio/Prestação de Serviços</h2>
-            <h3 class="subtopico2">Núcleo do Pequi | 2024 - 2025</h3>
-
-            <p>Prestação de serviços aproveitada como estágio remoto para a minha graduação.</p>
-            <p>Realizei atualizações no front-end utilizando HTML, CSS e WordPress. Fiz upload de arquivos públicos, correção de bugs e criação de páginas responsivas etc.</p>
-            <p>Participei de reuniões presenciais da empresa, discutindo mudanças atrativas para o website.</p>
-
-            <h1>Competências</h1>
+            <h1 data-key="competenciasTitulo">Competências</h1>
             <hr>
-            <h2>Tecnologias de Desenvolvimento</h2>
+            <h2 data-key="tecnologiasTitulo">Tecnologias de Desenvolvimento</h2>
             
             <section class="tecnologias">
                 <div>
-                    <h3 class="subtopico2"><span class="destaque">Front-End</span></h3>
+                    <h3 class="subtopico2"><span class="destaque" data-key="frontEndTitulo">Front-End</span></h3>
                     <ul>
                         <li>HTML</li>
                         <li>CSS</li>
@@ -77,7 +83,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h3 class="subtopico2"><span class="destaque">Back-End</span></h3>
+                    <h3 class="subtopico2"><span class="destaque" data-key="backEndTitulo">Back-End</span></h3>
                     <ul>
                         <li>SQL</li>
                         <li>TypeScript</li>
@@ -86,11 +92,8 @@
             </section>
         </div>
     </main>
-    <!-- <main>
-        <h1>bla bla bla</h1>
-    </main> -->
     <footer>
-        <p>&copy; Clebson Santos 2025 | Todos os direitos reservados</p>
+        <p data-key="rodape">&copy; Clebson Santos 2025 | Todos os direitos reservados</p>
         <div id="redes-sociais">
             <a href="https://github.com/ClebTech" target="_blank">
                 <img src="imagens/icones/github.png" alt="Ícone GitHub" class="mini-logos-redes-sociais" title="GitHub">
@@ -104,6 +107,6 @@
         </div>
     </footer>
 
-    <!-- <script src="scripts/main.js"></script> -->
+    <script src="scripts/main.js"></script>
 </body>
 </html>
