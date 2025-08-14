@@ -299,6 +299,34 @@ footer{
     }
 }
 
+
+/*efeito digitação*/
+.typewriter {
+    display: inline-block;
+    overflow: hidden;               /* esconde o texto */
+    white-space: nowrap;            /* não quebra linha */
+    border-right: 3px solid orange; /* largura e cor do cursor */
+    font-family: arial;
+    box-sizing: content-box; /* evita cortar letras */
+    font-size: 1.5rem;
+    animation: typing 3s steps(18, end) infinite alternate,
+               blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 18.5ch } /* 19 caracteres (incluindo espaço) */
+}
+
+@keyframes blink {
+    50% { border-color: transparent } /*animação do cursor piscando*/
+}
+
+.code-logo{
+    color: white;
+}
+
+
 @media(max-width: 500px){
     #bloco1{
         width: 100vw;
