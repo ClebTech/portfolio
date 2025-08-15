@@ -12,6 +12,8 @@ body{
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: auto;
 }
 
 #nome{
@@ -60,6 +62,7 @@ body{
     width: 70vw;
     padding: 2rem 4.5rem 2rem 4.5rem;
     animation: slideRight 1s ease-out forwards;
+    height: auto;
 }
 
 #bloco2 p{
@@ -71,6 +74,7 @@ body{
     padding-right: 30px;
     background-color: var(--main-color);
     width: 30vw;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -120,7 +124,7 @@ nav{
     align-items: center;
     justify-content: space-around;
     width: 100vw;
-    height: 6vh;
+    height: 60px;
     background-color: var(--main-color);
     border: 1px solid black;
     z-index: 1000;
@@ -154,8 +158,8 @@ nav ul li a:hover{
 main{
     margin-top: 6vh;
     display: flex;
-    width: 100vw;
-    height: 94vh;
+    width: 100%;
+    height: auto;
 }
 
 footer{
@@ -170,7 +174,8 @@ footer{
     border: 2px solid rgb(0, 0, 0);
     color: white;
     font-size: 0.75rem;
-    position: absolute;
+    position: relative; /*garante que o footer sempre fique abaixo do main*/
+    /* bottom: 0; */
 }
 
 #redes-sociais{
@@ -327,11 +332,18 @@ footer{
 }
 
 
-@media(max-width: 500px){
+@media(max-width: 750px){
     #bloco1{
         width: 100vw;
     }
     #bloco2{
         display: none;
+    }
+    .navnome{
+        display: none;
+    }
+
+    #bloco1{
+        padding: 40px;
     }
 }
